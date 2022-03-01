@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+/* //////////////////// GENERAL /////////////////// */
+html {
+  font-family: "Nunito", sans-serif;
+}
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* //////////////////// HEADER /////////////////// */
+.header {
+  flex: 1;
+  height: 62px;
+  padding: 0px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* background-color: aliceblue; */
+}
+.ensembleLogoButtons {
+  display: flex;
+  align-items: center;
+}
+.logo {
+  width: 160px;
+  height: 35px;
+  margin-right: 16px;
+}
+.logo:hover {
+  cursor: pointer;
+}
+.buttonHeader {
+  border: none;
+  background-color: white;
+  color: #555555;
+  font-size: 16px;
+  font-weight: 600;
+}
+.buttonHeader:hover {
+  cursor: pointer;
+}
+.ensembleSearchButtons {
+  display: flex;
+  align-items: center;
+}
+.buttonSearch {
+  height: 32px;
+  width: 32px;
+}
+.buttonSearch:hover {
+  cursor: pointer;
+}
+.buttonSearch path {
+  fill: #7c4ec4;
+  color: #7c4ec4;
+}
+.buttonAddListing {
+  background-color: white;
+  color: #7c4ec4;
+  padding: 12px 6px;
+  font-size: 16px;
+  border: 1px solid #7c4ec4;
+  border-radius: 5px;
+  font-weight: 600;
+  margin-left: 16px;
+}
+.buttonAddListing:hover {
+  cursor: pointer;
+}
+.buttonLoginJoin {
+  background-color: #7c4ec4;
+  color: white;
+  padding: 12px 6px;
+  margin: 0px 0px 0px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.buttonLoginJoin:hover {
+  cursor: pointer;
+  background-color: #9069cd;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+/* //////////////////// HOME /////////////////// */
+.ensemblePhotoSearch {
+  width: 100%;
+  height: 320px;
+  background-color: pink;
+  background-image: url("./img/pictureHome.jpg");
+  background-size: 100%;
+  background-position: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.blocTitreSearch {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+.ensembleSearchButton {
+  width: 876px;
+  height: 48px;
+  border: none;
+  display: flex;
+}
+h1 {
+  font-size: 36px;
   color: white;
+  font-weight: 700;
+  margin-bottom: 20px;
 }
-
-.App-link {
-  color: #61dafb;
+.inputSearchBanner {
+  width: 100%;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bannerButton {
+  width: 56px;
+  height: 48px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  border: none;
+  background-color: #7c4ec4;
+}
+.bannerButton:hover {
+  cursor: pointer;
+}
+.h2Button {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: #555555;
+}
+.buttonViewAllFleche {
+  display: flex;
+  align-items: center;
+}
+.buttonViewAll {
+  background-color: transparent;
+  border: none;
+  color: #7c4ec4;
+  font-size: 16px;
+  font-weight: 700;
+}
+/* //////////////////// ALLCARDS /////////////////// */
+.allCards {
+  display: flex;
+  overflow: hidden;
+  overflow: scroll;
+  height: 338px;
+  width: 100%;
+  margin-bottom: 20px;
+  /* background-color: pink; */
+}
+.cardBoxe {
+  overflow: hidden;
+  width: 270px;
+  height: 338px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  /* background-color: aquamarine; */
+}
+.cardPicture {
+  width: 270px;
+  height: 176px;
+  border-radius: 10px;
+}
+.cardName {
+  color: green;
+}
+.cardDescription {
+  overflow: hidden;
+  overflow: scroll;
+  width: 270;
+  height: 72;
+  color: black;
 }
