@@ -1,5 +1,7 @@
 /* //////////////////// GENERAL /////////////////// */
-html {
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
+body {
   font-family: "Nunito", sans-serif;
 }
 .container {
@@ -181,9 +183,195 @@ h2 {
   color: green;
 }
 .cardDescription {
+  text-decoration: none;
   overflow: hidden;
   overflow: scroll;
   width: 270;
   height: 72;
   color: black;
+}
+
+/* //////////////////// LogInSignUp /////////////////// */
+.ensembeContainers {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.contBtn {
+  display: flex;
+}
+.ensembleOngletsContainer {
+  height: 545px;
+  background-color: pink;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  padding-left: 50px;
+  padding-right: 50px;
+  padding-top: 30px;
+  box-sizing: border-box;
+}
+.onglets {
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-right: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+}
+.containerOnglets {
+  width: 424px;
+  text-align: justify;
+  border-top: none;
+}
+
+.active {
+  color: #7c4ec4;
+  text-decoration: underline;
+  font-weight: bold;
+  text-underline-offset: 10px;
+  text-decoration-thickness: 3px;
+}
+.imageLogSign {
+  width: 375px;
+  height: 545px;
+  background-image: url("./img/LogSign.jpg");
+  border-bottom-left-radius: 10px;
+  border-top-left-radius: 10px;
+  background-size: 100% 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 50px;
+  box-sizing: border-box;
+}
+h3 {
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.span1 {
+  color: white;
+  display: flex;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+/* //////////////////// SignUp/LogIn /////////////////// */
+.boxLogos {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+.imageLogos {
+  width: 25px;
+  height: 25px;
+  padding: 15px;
+  border: 1px solid rgb(240, 240, 240);
+  border-radius: 50px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.imageLogos:hover {
+  border: none;
+  background-color: rgb(240, 240, 240);
+}
+.boxSpanLines {
+  display: flex;
+  margin-bottom: 15px;
+}
+.lines {
+  flex: 1;
+  height: 1px;
+  background-color: rgb(145, 143, 143);
+  align-items: center;
+  display: flex;
+  margin-top: 5px;
+}
+.span2 {
+  color: rgb(145, 143, 143);
+  font-weight: 300;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.ensembleInputsTitles {
+  margin-bottom: 20px;
+}
+.titresInputs {
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+.inputSignEmail {
+  width: 100%;
+  box-sizing: border-box;
+  height: 45px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  padding-left: 15px;
+  border: 1px solid rgb(145, 143, 143);
+}
+.boxPasswordEye {
+  height: 45px;
+  display: flex;
+  border-radius: 5px;
+}
+.eye {
+  width: 20px;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  padding-right: 10px;
+  border-top: 1px solid rgb(145, 143, 143);
+  border-bottom: 1px solid rgb(145, 143, 143);
+  border-right: 1px solid rgb(145, 143, 143);
+  cursor: pointer;
+  background-color: white;
+}
+.inputSignUpLogInPassword {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 20px;
+  border: none;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top: 1px solid rgb(145, 143, 143);
+  border-left: 1px solid rgb(145, 143, 143);
+  border-bottom: 1px solid rgb(145, 143, 143);
+}
+.boxCheckbox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.checkbox {
+  height: 20px;
+  width: 20px;
+}
+.boxRememberMe {
+  display: flex;
+  align-items: center;
+  color: black;
+  font-size: 13px;
+}
+.spanPassword {
+  color: black;
+  font-size: 13px;
+  cursor: pointer;
+}
+.inputLogInSignUp {
+  background-color: #7c4ec4;
+  color: white;
+  width: 100%;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  font-size: 15px;
+  cursor: pointer;
 }

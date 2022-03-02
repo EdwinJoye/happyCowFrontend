@@ -1,6 +1,6 @@
 import Logo from "../img/logo.png";
 import Search from "../img/glass.svg";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -27,7 +27,9 @@ const Header = () => {
       <div className="ensembleSearchButtons">
         <img className="buttonSearch" src={Search} alt="" />
         <button className="buttonAddListing">Add listing</button>
-        <button className="buttonLoginJoin">Login / Join</button>
+        <Link to="LogInSignUp">
+          <button className="buttonLoginJoin">Login / Join</button>
+        </Link>
       </div>
     </div>
   );
