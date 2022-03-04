@@ -1,8 +1,9 @@
 import SignUp from "../components/SignUp";
 import LogIn from "../components/LogIn";
 import { useState } from "react";
+import CompteValide from "../components/CompteValide";
 
-const LogInSignUp = () => {
+const LogInSignUp = ({ setUser }) => {
   const [stateOnglets, setStateOnglets] = useState(1);
 
   const goLogIn = () => {
@@ -36,9 +37,9 @@ const LogInSignUp = () => {
 
         <div className="containerOnglets">
           {stateOnglets === 1 ? (
-            <LogIn className="contenuLogIn"></LogIn>
+            <LogIn setUser={setUser}></LogIn>
           ) : (
-            <SignUp className="contenuSignUp"></SignUp>
+            <SignUp setUser={setUser}></SignUp>
           )}
         </div>
       </div>

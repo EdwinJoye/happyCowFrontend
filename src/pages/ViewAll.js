@@ -1,9 +1,10 @@
-import AllCards from "../components/AllCards";
+import { useState } from "react";
+import AllCards2 from "../components/AllCards2";
 import Search2 from "../img/glass2.svg";
-import FlecheDroite from "../img/flecheDroite.svg";
-import { Link } from "react-router-dom";
 
-const Home = ({ setSearchBar, dataFiltered, isLoading }) => {
+const ViewAll = ({ setSearchBar, dataFiltered, isLoading }) => {
+  const [page, setPage] = useState(1);
+
   return isLoading ? (
     <p>En cours de chargement</p>
   ) : (
@@ -17,6 +18,7 @@ const Home = ({ setSearchBar, dataFiltered, isLoading }) => {
               type="text"
               placeholder="Search for city, region or Zip code"
               onChange={(event) => {
+                console.log(event.target.value);
                 setSearchBar(event.target.value);
               }}
             />
@@ -29,24 +31,34 @@ const Home = ({ setSearchBar, dataFiltered, isLoading }) => {
       <div className="container">
         <div className="h2Button">
           <h2>Vegan Food Near Me</h2>
-          <Link className="buttonViewAllFleche" to="/viewAll">
-            <button className="buttonViewAll">View all</button>
-            <img src={FlecheDroite} alt="" />
-          </Link>
         </div>
-        <div className="allCards">
+        <div className="allCards2">
           {dataFiltered.map((item, index) => {
             return (
               <div key={index}>
-                <AllCards item={item} key={index}></AllCards>
+                <AllCards2 item={item} key={index}></AllCards2>
               </div>
             );
           })}
           ;
+        </div>
+        <div className="boxButtonsPagePrécédenteSuivante">
+          <button
+            className="buttonPagePrécédenteSuivante"
+            onClick={() => setPage(page - 1)}
+          >
+            Page précédente
+          </button>
+          <button
+            className="buttonPagePrécédenteSuivante"
+            onClick={() => setPage(page + 1)}
+          >
+            Page suivante
+          </button>
         </div>
       </div>
     </div>
   );
 };
 
-export default Home;
+export default ViewAll;

@@ -2,18 +2,35 @@ import Google from "../img/google.svg";
 import Facebook from "../img/facebook.svg";
 import Apple from "../img/apple.svg";
 import Eye from "../img/eye.svg";
+import axios from "axios";
+import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const LogIn = () => {
-  function showPassword() {
-    var x = document.getElementById("myInput");
-    if (x.type === "password") {
-      x.type = "text";
-    } else {
-      x.type = "password";
+const LogIn = ({ setUser }) => {
+  const [email, setEmail] = useState("");
+  const navigate = useNavigate();
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (event) => {
+    try {
+      event.preventDefault();
+      const response = await axios.post("http://localhost:3002/user/login", {
+        email: email,
+        password: password,
+      });
+      console.log(response);
+      setUser(response.data.token);
+      navigate("/");
+    } catch (error) {
+      console.log(error.message);
+      console.log(error.response);
+      if (error.response.status === 400 || error.response.status === 401) {
+        alert("Mauvais email et/ou mot de passe");
+      }
     }
-  }
+  };
   return (
-    <div>
+    <form onSubmit={handleSubmit}>
       <div className="boxLogos">
         <img className="imageLogos" src={Facebook} alt="facebook" />
         <img className="imageLogos" src={Apple} alt="apple" />
@@ -30,6 +47,7 @@ const LogIn = () => {
           className="inputSignEmail"
           type="text"
           placeholder="Username or Email"
+          onChange={(event) => setEmail(event.target.value)}
         />
         <h5 className="titresInputs">Password</h5>
         <div className="boxPasswordEye">
@@ -37,13 +55,14 @@ const LogIn = () => {
             className="inputSignUpLogInPassword"
             type="password"
             placeholder="Password"
+            onChange={(event) => setPassword(event.target.value)}
           />
           <img className="eye" src={Eye} alt="eye" />
         </div>
       </div>
       <div className="boxCheckbox">
         <div className="boxRememberMe">
-          <input className="checkbox" type="checkbox" />{" "}
+          <input className="checkbox" type="checkbox" />
           <span>Remember me</span>
         </div>
         <div>
@@ -51,13 +70,16 @@ const LogIn = () => {
         </div>
       </div>
       <div>
-        <input
+        <button
+          type="submit"
           className="inputLogInSignUp"
           type="submit"
           value="Log In"
-        ></input>
+        >
+          Log In
+        </button>
       </div>
-    </div>
+    </form>
   );
 };
 

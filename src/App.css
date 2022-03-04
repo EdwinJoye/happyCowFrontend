@@ -1,12 +1,23 @@
 /* //////////////////// GENERAL /////////////////// */
+@import "../src/index.css";
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@800&display=swap");
 body {
   font-family: "Nunito", sans-serif;
+  text-decoration: none;
 }
 .container {
   max-width: 1140px;
   margin: 0 auto;
+}
+.display {
+  display: flex;
+}
+.margin {
+  margin-bottom: 10px;
+}
+a {
+  text-decoration: none;
 }
 
 /* //////////////////// HEADER /////////////////// */
@@ -40,6 +51,9 @@ body {
 }
 .buttonHeader:hover {
   cursor: pointer;
+  background-color: #555555;
+  color: white;
+  border-radius: 5px;
 }
 .ensembleSearchButtons {
   display: flex;
@@ -83,12 +97,25 @@ body {
   cursor: pointer;
   background-color: #9069cd;
 }
+.buttonLogOut {
+  background-color: #c2185b;
+  color: white;
+  padding: 12px 6px;
+  margin: 0px 0px 0px 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+}
+.buttonLogOut:hover {
+  cursor: pointer;
+  background-color: #9069cd;
+}
 
 /* //////////////////// HOME /////////////////// */
 .ensemblePhotoSearch {
   width: 100%;
   height: 320px;
-  background-color: pink;
   background-image: url("./img/pictureHome.jpg");
   background-size: 100%;
   background-position: top;
@@ -119,6 +146,7 @@ h1 {
   border-bottom-left-radius: 5px;
   border-top-left-radius: 5px;
   border: none;
+  padding-left: 10px;
 }
 .bannerButton {
   width: 56px;
@@ -148,6 +176,7 @@ h2 {
 .buttonViewAllFleche {
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .buttonViewAll {
   background-color: transparent;
@@ -156,6 +185,7 @@ h2 {
   font-size: 16px;
   font-weight: 700;
 }
+
 /* //////////////////// ALLCARDS /////////////////// */
 .allCards {
   display: flex;
@@ -201,7 +231,7 @@ h2 {
   display: flex;
 }
 .ensembleOngletsContainer {
-  height: 545px;
+  height: 600px;
   background-color: pink;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -235,8 +265,8 @@ h2 {
   text-decoration-thickness: 3px;
 }
 .imageLogSign {
-  width: 375px;
-  height: 545px;
+  width: 400px;
+  height: 600px;
   background-image: url("./img/LogSign.jpg");
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
@@ -283,7 +313,7 @@ h3 {
 }
 .boxSpanLines {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 .lines {
   flex: 1;
@@ -305,6 +335,11 @@ h3 {
 .titresInputs {
   font-weight: 700;
   margin-bottom: 5px;
+}
+.titresInputs2 {
+  font-weight: 700;
+  margin-bottom: 5px;
+  margin-top: 15px;
 }
 .inputSignEmail {
   width: 100%;
@@ -334,7 +369,20 @@ h3 {
 .inputSignUpLogInPassword {
   width: 100%;
   height: 45px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
+  border: none;
+  padding-left: 15px;
+  box-sizing: border-box;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  border-top: 1px solid rgb(145, 143, 143);
+  border-left: 1px solid rgb(145, 143, 143);
+  border-bottom: 1px solid rgb(145, 143, 143);
+}
+.inputSignUpLogInConfirmPassword {
+  width: 100%;
+  height: 45px;
+  margin-bottom: 1opx;
   border: none;
   padding-left: 15px;
   box-sizing: border-box;
@@ -348,7 +396,7 @@ h3 {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 .checkbox {
   height: 20px;
@@ -374,4 +422,259 @@ h3 {
   border-radius: 5px;
   font-size: 15px;
   cursor: pointer;
+}
+.fa-eye {
+  position: relative;
+  z-index: 1;
+  left: -30px;
+  color: #7b7b7b;
+  cursor: pointer;
+}
+
+/* //////////////////// ViewAll /////////////////// */
+.allCards2 {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-bottom: 20px;
+  justify-content: space-between;
+
+  /* background-color: pink; */
+}
+.cardBoxe2 {
+  width: 265px;
+  height: 338px;
+  padding: 5px;
+  margin-bottom: 10px;
+  border: 1px grey solid;
+  border-radius: 5px;
+  /* background-color: aquamarine; */
+}
+.cardBoxe2:hover {
+  box-shadow: 0 0 15px rgba(33, 33, 33, 0.2);
+}
+.cardPicture2 {
+  width: 265px;
+  height: 176px;
+  border-radius: 10px;
+}
+.cardName2 {
+  color: green;
+}
+.cardDescription2 {
+  text-decoration: none;
+  overflow: hidden;
+  overflow: scroll;
+  width: 100%;
+  height: 75px;
+  color: black;
+  /* background-color: #7c4ec4; */
+}
+.boxButtonsPagePrécédenteSuivante {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.buttonPagePrécédenteSuivante {
+  border: none;
+  cursor: pointer;
+}
+
+/* //////////////////// OFFER 1 /////////////////// */
+.grandEnsembleBande {
+  display: flex;
+  justify-content: space-between;
+  background-color: #22820e;
+  padding: 10px;
+  align-items: center;
+  padding-left: 180px;
+  padding-right: 180px;
+}
+.petitEnsembleBande {
+  display: flex;
+  align-items: center;
+}
+.nameRestaus {
+  font-family: "Nunito", sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 10px;
+}
+.boxMedal {
+  display: flex;
+  padding: 10px;
+}
+.boxVegan {
+  display: flex;
+  padding: 10px;
+}
+.imageMedal {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.spanMedal {
+  color: white;
+  font-weight: 600;
+}
+.imageVegan {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+}
+.boxesDroite {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  cursor: pointer;
+}
+.svgDroite {
+  background-color: white;
+  height: 20px;
+  width: 20px;
+  padding: 10px;
+  border-radius: 100px;
+  margin-bottom: 10px;
+}
+.spanDroite {
+  color: white;
+  font-weight: 600;
+}
+
+/* //////////////////// OFFER 2 /////////////////// */
+.ensembleBoxesGauche {
+  flex: 2;
+  max-width: 755px;
+  /* background-color: #7b7b7b; */
+}
+.boxHouse {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+.imgHouse {
+  margin-right: 20px;
+}
+.boxesHorlogeTelephoneLocation {
+  display: flex;
+  margin-bottom: 20px;
+}
+.boxhorloge {
+  display: flex;
+  width: 256px;
+  height: 72px;
+  /* background-color: pink; */
+}
+.imgHorloge {
+  margin-right: 10px;
+}
+.boxhorloge2 {
+  display: flex;
+  flex-direction: column;
+}
+.spanHorloge {
+  color: red;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+.span2horloge {
+  color: red;
+  margin-bottom: 5px;
+}
+.span3horloge {
+  color: #7c4ec4;
+}
+.boxTelephone {
+  width: 256px;
+  height: 72px;
+  /* background-color: aquamarine; */
+}
+.boxLocation {
+  width: 256px;
+  height: 72px;
+  /* background-color: yellow; */
+}
+.boxDescription {
+  font-size: 16px;
+  margin-bottom: 10px;
+  line-height: 20px;
+}
+.boxCategorie {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.spanCategories {
+  font-size: 16px;
+  margin-right: 10px;
+}
+.boxFoodPictures {
+  max-width: 755px;
+  display: flex;
+  overflow: hidden;
+  overflow: scroll;
+  /* background-color: pink; */
+}
+.imgFoodPictures {
+  height: 220px;
+  width: 245px;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+.boxButtonsAdd {
+  margin-bottom: 20px;
+  display: flex;
+}
+.buttonAdds {
+  display: flex;
+  align-items: center;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  background-color: #7c4ec4;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-right: 20px;
+  cursor: pointer;
+}
+.spanButtons {
+  font-weight: 300;
+  margin-left: 10px;
+}
+.ensembleBoxesDroite {
+  flex: 1;
+  height: 300px;
+}
+.boxMap {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  /* background-color: green; */
+}
+.map {
+  width: 100%;
+  height: 400px;
+}
+.spanWebsite {
+  margin-right: 20px;
+}
+.boxSousMap {
+  height: 200px;
+  width: 100%;
+  background-color: rgb(245, 245, 245);
+  display: flex;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.imgBoxSites {
+  margin-right: 20px;
+  height: 20px;
+}
+.textSousMap {
+  color: black;
 }
