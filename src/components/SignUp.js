@@ -6,7 +6,7 @@ import Eye from "../img/eye.svg";
 import axios from "axios";
 import { useState } from "react";
 
-const SignUp = () => {
+const SignUp = ({ setUser }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -24,6 +24,7 @@ const SignUp = () => {
         password: password,
       });
       alert("votre compte a bien été validé !");
+      setUser(response.data.token);
       navigate("/");
       if (password !== confirmPassword) {
         alert("vos deux password ne sont pas identiques");
